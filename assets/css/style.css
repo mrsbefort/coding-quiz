@@ -23,32 +23,32 @@
     font-family: "Lucida Console", Courier, monospace;
     text-align: center;
   }
-  
+
+//////////////////////////////*header starts here*///////////////////////
   header {
     background: var(--secondary);
     padding: 30px 25px;
     font-size: 30px;
     border: solid 15px var(--primary);
   }
-  /*Header color change animation*/
+//////////////////////////////*header color change animation*///////////
   h1 {
     animation: color-change 1s infinite;
   }
-  
   @keyframes color-change {
     0% { color: var(--primary); }
     50% { color: var(--tertiary); }
     100% { color: var(--primary); }
     50% { color: var(--tertiary); }
   }
-
   header p {
     color: var(--tertiary);
     margin: 5px 0 20px;
     font-size: 20px;
   }
+////////////////////////////*end of header*//////////////////////////////
 
-  /* button styling */
+////////////////////////////*button starts here*/////////////////////////
   button {
     align-items: center;
     background: linear-gradient(144deg, var(--primary)50%, var(--tertiary));
@@ -65,9 +65,9 @@
     min-width: 140px;
     padding: 19px 24px; 
   }
-//end of button//
+////////////////////////////*end of button*//////////////////////////////
 
-
+////////////////////////////*footer starts here*/////////////////////////
     body .footer{
         display: grid;
         grid-template-rows: 1fr auto;
@@ -81,7 +81,11 @@
         z-index: 1;
         --footer-background:#fd439a;
         display: grid;
-        position: relative;
+        position:fixed;
+        width: 100%;
+        left:0px;
+        bottom:0px;
+        height:30px;
         grid-area: footer;
         min-height: 12rem;
       }
@@ -177,4 +181,6 @@
         }
         100% {
           bottom: var(--distance, 10rem);
-        }}
+        }
+    }
+////////////////////////////*footer ends*////////////////////////////
