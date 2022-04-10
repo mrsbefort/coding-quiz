@@ -7,7 +7,6 @@
     --primary: #fd439a;
     --secondary: #13010d;
     --tertiary: #ddff44; 
-    --quaternary: rgb(233, 39, 233);
     font-size: 62.5%;
   }
   
@@ -24,14 +23,14 @@
     text-align: center;
   }
 
-//////////////////////////////*header starts here*///////////////////////
+/*------------------------header starts here---------------------------*/
   header {
     background: var(--secondary);
     padding: 30px 25px;
     font-size: 30px;
     border: solid 15px var(--primary);
   }
-//////////////////////////////*header color change animation*///////////
+/*-----------------header color change animation-----------------------*/
   h1 {
     animation: color-change 1s infinite;
   }
@@ -44,11 +43,20 @@
   header p {
     color: var(--tertiary);
     margin: 5px 0 20px;
-    font-size: 20px;
+    font-size: 25px;
+    text-align: center;
+    text-justify: inner-character;
   }
-////////////////////////////*end of header*//////////////////////////////
+  header p1 {
+    color: var(--primary);
+    margin: 5px 0 20px;
+    font-size: 30px;
+    text-align: center;
+    text-justify: inner-character;
+  }
+/*-----------------------end of header---------------------------------*/
 
-////////////////////////////*button starts here*/////////////////////////
+/*---------------------button starts here------------------------------*/
   button {
     align-items: center;
     background: linear-gradient(144deg, var(--primary)50%, var(--tertiary));
@@ -58,36 +66,40 @@
     color: rgb(0, 0, 0);
     display: flex;
     font-family: Phantomsans, sans-serif;
-    font-size: 20px;
+    font-size: 30px;
     justify-content: center;
     line-height: 1em;
     max-width: 100%;
     min-width: 140px;
     padding: 19px 24px; 
   }
-////////////////////////////*end of button*//////////////////////////////
+/*----------------------end of button-----------------------------------*/
 
-////////////////////////////*footer starts here*/////////////////////////
+/*---------------------footer starts here-------------------------------*/
     body .footer{
+        height: 50rem; 
         display: grid;
         grid-template-rows: 1fr auto;
         grid-template-areas: "main" "footer";
         overflow-x: hidden;
         background: #13010d;
         min-height: 100vh;
+        
+        position: fixed;
+        width: 100%;
+        left:0px;
+        height: 0rem; 
+        bottom: 0px;
         font-family: "Open Sans", sans-serif;
       }
       body .footer {
         z-index: 1;
         --footer-background:#fd439a;
         display: grid;
-        position:fixed;
-        width: 100%;
-        left:0px;
-        bottom:0px;
-        height:30px;
         grid-area: footer;
         min-height: 12rem;
+        height: 24rem; 
+        bottom: 0px;
       }
       body .footer .bubbles {
         position: absolute;
@@ -183,4 +195,4 @@
           bottom: var(--distance, 10rem);
         }
     }
-////////////////////////////*footer ends*////////////////////////////
+/*-----------------footer ends-----------------------------------*/
