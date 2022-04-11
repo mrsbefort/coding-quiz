@@ -66,6 +66,10 @@ h2 {
   max-width: 600px;
 }
 
+#questions {
+  padding-bottom: 500px;
+}
+
 .choices button {
   display: block;
 }
@@ -161,7 +165,6 @@ li:nth-child(odd) {
         display: grid;
         grid-template-rows: 1fr auto;
         grid-template-areas: "main" "footer";
-     
         min-height: calc(100vh - 95px);
         position: fixed;
         width: 100%;
