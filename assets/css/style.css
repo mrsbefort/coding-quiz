@@ -72,6 +72,7 @@ h2 {
 
 .hide {
   display: none;
+  
 }
 
 .start {
@@ -143,7 +144,7 @@ input[type="text"] {
 ol {
   padding-left: 0px;
   max-height: 400px;
-  overflow: auto;
+ 
 }
 
 li {
@@ -160,24 +161,27 @@ li:nth-child(odd) {
         display: grid;
         grid-template-rows: 1fr auto;
         grid-template-areas: "main" "footer";
-        overflow-x: hidden;
-        background: #13010d;
-        min-height: 100vh;
+     
+        min-height: calc(100vh - 95px);
         position: fixed;
         width: 100%;
         left:0px;
         height: 12rem; 
         bottom: 0px;
         font-family: "Open Sans", sans-serif;
+       
       }
       body .footer {
-        z-index: 1;
+        z-index: 9999;
         --footer-background:#fd439a;
         display: grid;
         grid-area: footer;
         min-height: 1rem;
         height: 25%; 
-        bottom: 0px;
+        bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
       }
       body .footer .bubbles {
         position: relative;
