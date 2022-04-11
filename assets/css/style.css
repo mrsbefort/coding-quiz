@@ -26,6 +26,7 @@
 /*------------------------header starts here---------------------------*/
   header {
     background: var(--secondary);
+    margin: 10px auto 0 auto;
     padding: 30px 25px;
     font-size: 30px;
     border: solid 15px var(--primary);
@@ -33,6 +34,7 @@
 /*-----------------header color change animation-----------------------*/
   h1 {
     animation: color-change 1s infinite;
+    font-size: 50px;
   }
   @keyframes color-change {
     0% { color: var(--primary); }
@@ -55,10 +57,66 @@
     text-justify: inner-character;
   }
 /*-----------------------end of header---------------------------------*/
+h2 {
+  font-size: 30px;
+}
+/*classes*/
+.wrapper {
+  margin: 10px auto 0 auto;
+  max-width: 600px;
+}
+
+.choices button {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.start {
+  text-align: center;
+}
+
+.scores {
+  position: absolute;
+  top:40px;
+  left: 30px;
+  font-size: 30px;
+}
+
+.feedback {
+  font-style: italic;
+  font-size: 120%;
+  margin-top: 20px;
+  padding-top: 10px;
+  color: gray;
+  border-top: 2px solid rgb(201, 193, 193);
+}
+
+.timer {
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  font-size: 30px;
+}
+a {
+  color: var(--tertiary);
+  text-decoration: none;
+  transition: color 0.1s;
+    border-radius: 8px;
+}
+
+a:hover {
+  color: var(--primary); 
+  border: 800px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
 
 /*---------------------button starts here------------------------------*/
   button {
-    align-items: center;
+    text align: center;
     background: linear-gradient(144deg, var(--primary)50%, var(--tertiary));
     border: 800px;
     border-radius: 8px;
@@ -66,15 +124,36 @@
     color: rgb(0, 0, 0);
     display: flex;
     font-family: Phantomsans, sans-serif;
-    font-size: 30px;
+    font-size: 15px;
     justify-content: center;
     line-height: 1em;
     max-width: 100%;
     min-width: 140px;
     padding: 19px 24px; 
   }
+  button:hover {
+    background-color: silver;
+  }
 /*----------------------end of button-----------------------------------*/
 
+input[type="text"] {
+  font-size: 100%;
+}
+
+ol {
+  padding-left: 0px;
+  max-height: 400px;
+  overflow: auto;
+}
+
+li {
+  padding: 5px;
+  list-style: decimal inside none;
+}
+
+li:nth-child(odd) {
+  background-color: #dfdae7;
+}
 /*---------------------footer starts here-------------------------------*/
     body .footer{
         height: 50rem; 
@@ -84,11 +163,10 @@
         overflow-x: hidden;
         background: #13010d;
         min-height: 100vh;
-        
         position: fixed;
         width: 100%;
         left:0px;
-        height: 0rem; 
+        height: 12rem; 
         bottom: 0px;
         font-family: "Open Sans", sans-serif;
       }
@@ -97,16 +175,16 @@
         --footer-background:#fd439a;
         display: grid;
         grid-area: footer;
-        min-height: 12rem;
-        height: 24rem; 
+        min-height: 1rem;
+        height: 25%; 
         bottom: 0px;
       }
       body .footer .bubbles {
-        position: absolute;
+        position: relative;
         top: 0;
         left: 0;
         right: 0;
-        height: 1rem;
+        height: 0rem;
         background: var(--footer-background);
         filter: url("#blob");
       }
@@ -121,9 +199,7 @@
       }
       body .footer .content {
         z-index: 2;
-        display: grid;
-        grid-template-columns: 1fr auto;
-        grid-gap: 4rem;
+        display: outside;
         padding: 2rem;
         background: var(--footer-background);
       }

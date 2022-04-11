@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Challenge Yourself with Code Quizy</title>
+    <title>Challenge Yourself with Code</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -23,16 +23,37 @@
 <!--Ending of Header-->
 
 <!--Start of Code Quiz-->
-<main class="page-content">
-    <section class="questions">
-      <h2 class="title">Start Code Quizanator</h2>
-      <ul class="begin">
-        <li class="q1">questions formed here?</li>
-      </ul>
-    </section>
-  </main>
-<button>Start Code Quiz</button>
+<div class="scores"><a href="score.html">View Highscores</a></div>
 
+<div class="timer">Time: <span id="time">0</span></div>
+
+<div class="wrapper">
+  <div id="start-screen" class="start">
+    <h2>Start Code Quizanator</h2>
+        <p>
+          Let's see what you know! Here are some code-related questions. Answer them all as quickly as you can and try to get the HIGH SCORE, but note that incorrect answers will result in a 10 second score/time penalty. Don't worry, you can try as many times as you want!
+        </p>
+        <button id="start">Start Code Quiz</button>
+      </div>
+
+      <div id="questions" class="hide">
+        <h2 id="question-title"></h2>
+        <div id="choices" class="choices"></div>
+      </div>
+
+      <div id="end-screen" class="hide">
+        <h2>All done!</h2>
+        <p>Your final score is <span id="final-score"></span>.</p>
+        <p>
+          Enter initials: <input type="text" id="initials" max="3" />
+          <button id="submit">Submit</button>
+        </p>
+      </div>
+<!--js script links here-->
+<script src="./assets/script.js"></script>
+<script src="./assets/questions.js"></script>
+      <div id="feedback" class="feedback hide"></div>
+    </div>
 <!--End of Code Quiz-->
 
 <!--Footer Start-->
@@ -189,7 +210,5 @@
 </svg>
 <!--Footer End-->
 
-<!--js script link here-->
-<script src="./assets/script.js"></script>
 </body>
 </html>
