@@ -64,6 +64,7 @@ h2 {
 .wrapper {
   margin: 10px auto 0 auto;
   max-width: 600px;
+  height: 100vh;
 }
 
 #questions {
