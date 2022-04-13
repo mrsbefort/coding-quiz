@@ -11,7 +11,7 @@
 <!--Code Starts Here-->
 <body>
 <!--Beginning of Header-->    
-    <header class="hide">
+    <header id="header">
         <h1>Challenge Yourself with Code Quizanator</h1>
         <p>Have an upcoming technical interview?</p>
             <p>Are you bitting your nails and shaking your foot in major anxiety?</p>
@@ -23,25 +23,23 @@
 <!--Ending of Header-->
 
 <!--Start of Code Quiz-->
-<div class="scores"><a href="score.html">View Highscores</a></div>
-
-<div class="timer">Time: <span id="time">0</span></div>
-
 <div class="wrapper">
   <div id="start-screen" class="start">
     <h2>Start Code Quizanator</h2>
         <p>
           Let's see what you know! Here are some code-related questions. Answer them all as quickly as you can and try to get the HIGH SCORE, but note that incorrect answers will result in a 10 second score/time penalty. Don't worry, you can try as many times as you want!
         </p>
-        <button id="start">Start Code Quiz</button>
+        <button id="start"  class="start-button">Start Code Quiz</button>
       </div>
 
       <div id="questions" class="hide">
+        <div class="timer">Time: <span id="time">0</span></div>
         <h2 id="question-title"></h2>
         <div id="choices" class="choices"></div>
       </div>
 
       <div id="end-screen" class="hide">
+        <div class="scores"><a href="score.html">View Highscores</a></div>
         <h2>All done!</h2>
         <p>Your final score is <span id="final-score"></span>.</p>
         <p>

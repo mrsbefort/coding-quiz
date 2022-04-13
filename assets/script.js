@@ -6,6 +6,7 @@ var submitBtn = document.querySelector("#submit");
 var startBtn = document.querySelector("#start");
 var initialsEl = document.querySelector("#initials");
 var feedbackEl = document.querySelector("#feedback");
+var headerEl = document.querySelector("#header");
 
 // quiz state variables
 var currentQuestionIndex = 0;
@@ -16,6 +17,9 @@ function startQuiz() {
   // hide start screen
   var startScreenEl = document.getElementById("start-screen");
   startScreenEl.setAttribute("class", "hide");
+
+//hide header when quiz Starts
+headerEl.setAttribute("class", "hide");
 
   // un-hide questions section
   questionsEl.removeAttribute("class");
