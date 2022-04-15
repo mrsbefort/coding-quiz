@@ -67,6 +67,10 @@ h2 {
   height: 100vh;
   color: white;
 }
+.wrapper ol {
+  background: var(--tertiary);
+  color: black;
+}
 
 #questions {
   padding-bottom: 500px;
